@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PetTypesItem from './PetTypesItem'
 
-
 const PetTypesPage = (props) => {
     const [petTypes, setPetTypes] = useState([])
 
@@ -15,7 +14,6 @@ const PetTypesPage = (props) => {
                     throw (error)
                 }
                 const responseBody = await response.json()
-                console.log(responseBody)
                 setPetTypes(responseBody.petTypes)
             } catch (err) {
                 console.error(`Error in Fetch: ${err.message}`)
@@ -25,20 +23,16 @@ const PetTypesPage = (props) => {
 
     }, [])
 
-
-
     const petTypesItem = petTypes.map((value) => {
-        console.log(value)
-        
         return (
             <PetTypesItem
                 key={value.id}
                 id={value.id}
                 name={value.name}
+                description={value.description}
                 img_url={value.img_url} />
         )
     })
-
     return (
         <div>
             <h1>Pet Type List</h1>
