@@ -30,7 +30,7 @@ const PetTypesPage = (props) => {
                 id={value.id}
                 name={value.name}
                 description={value.description}
-                img_url={value.img_url} />
+                img_url={value.image} />
         )
     })
     return (

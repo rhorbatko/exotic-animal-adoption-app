@@ -2,12 +2,13 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const PetTypesItem = ({ id, name, description, img_url }) => {
-
+  console.log(img_url)
   return (
     <div>
       <li><Link to={`/petTypes/${id}`}>
         <h1>{name} </h1>
-        <img src={"img_url"} /></Link></li>
+      </Link></li>
+      <img src={img_url} />
       <h3>{description}</h3>
     </div>
   )
