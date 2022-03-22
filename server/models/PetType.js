@@ -18,9 +18,7 @@ class PetType {
             const result = await pool.query("SELECT * FROM pet_types;")
             const petTypesData = result.rows
             const petTypes = petTypesData.map((petType) => new PetType(petType))
-
             return petTypes
-            
         } catch (error) {
             console.error(error);
             throw(error)

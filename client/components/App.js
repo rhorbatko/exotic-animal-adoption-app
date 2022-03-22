@@ -15,7 +15,7 @@ const App = props => {
   return <div className="callout primary">
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={PetTypesPage} />
+        <Route exact path="/pet-types" component={PetTypesPage} />
       </Switch>
     </BrowserRouter>
   </div>

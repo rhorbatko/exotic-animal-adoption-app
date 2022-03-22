@@ -3,41 +3,42 @@ import PetTypesItem from './PetTypesItem'
 
 const PetTypesPage = (props) => {
     const [petTypes, setPetTypes] = useState([])
+    
+    const getPetTypes = async () => {
+        try {
+            const response = await fetch("/api/v1/pet-types")
+            if (!response.ok) {
+                const errorMessage = `${response.status} (${response.statusText})`
+                const error = new Error(errorMessage)
+                throw (error)
+            }
+            const responseBody = await response.json()
+            setPetTypes(responseBody.petTypes)
+        } catch (err) {
+            console.error(`Error in Fetch: ${err.message}`)
+        }
+    }
 
     useEffect(() => {
-        const getPetTypes = async () => {
-            try {
-                const response = await fetch("/api/v1/pet-types")
-                if (!response.ok) {
-                    const errorMessage = `${response.status} (${response.statusText})`
-                    const error = new Error(errorMessage)
-                    throw (error)
-                }
-                const responseBody = await response.json()
-                setPetTypes(responseBody.petTypes)
-            } catch (err) {
-                console.error(`Error in Fetch: ${err.message}`)
-            }
-        }
         getPetTypes()
-
     }, [])
 
-    const petTypesItem = petTypes.map((value) => {
+    const petTypesData = petTypes.map((value) => {
         return (
             <PetTypesItem
                 key={value.id}
                 id={value.id}
                 name={value.name}
                 description={value.description}
-                img_url={value.image} />
+                img_url={value.image} 
+            />
         )
     })
     return (
         <div>
-            <h1>Pet Type List</h1>
+            <h1>Exotic Animal Shelter</h1>
             <ul>
-                {petTypesItem}
+                {petTypesData}
             </ul>
         </div>
     )
