@@ -11,7 +11,14 @@ const App = props => {
     $(document).foundation()
   }, [])
 
-  return <div className="callout primary">Replace this div with your Router.</div>
+  return <div className="callout primary">
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={PetTypesPage} /> 
+
+      </Switch>
+    </BrowserRouter>
+  </div>
 }
 
 export default hot(App)

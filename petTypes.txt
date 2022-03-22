@@ -1,0 +1,4 @@
+Mammals;client\assets\images\List-of-Mammals-1.jpeg
+Reptiles;client\assets\images\Types-of-Reptiles.jpg
+Birds;client\assets\images\Types-Of-Birds-Pictures.jpg
+Fish;client\assets\images\Types-of-Fish-800x500.jpeg
