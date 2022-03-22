@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const BookItem = (props) => {
-  const { id,name, img_url } = props.petType
+const PetTypesItem= ({ id, name, img_url }) => {
+  
   return (
-    <li><Link to={`/pet_types/${id}`}>{name} {img_url}</Link></li>
+    <li><Link to={`/petTypes/${id}`}>{name} {img_url}</Link></li>
   )
 }
 
-export default PetTypeItem
+export default PetTypesItem
