@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const PetTypesItem = ({ id, name, description, img_url }) => {
-  console.log(img_url)
   return (
     <div>
       <li><Link to={`/petTypes/${id}`}>
