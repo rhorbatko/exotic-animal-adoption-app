@@ -1,0 +1,4 @@
+Mammals;images\List-of-Mammals-1.jpeg; Warm-blooded creatures.
+Reptiles;images\Types-of-Reptiles.jpg; Cold-blooded and slimey.
+Birds;images\Types-Of-Birds-Pictures.jpg; Can fly sometimes can't.
+Fish;images\Types-of-Fish-800x500.jpeg; Can breathe underwater.

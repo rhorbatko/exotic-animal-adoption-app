@@ -9,7 +9,7 @@
     "dev:client": "node_modules/.bin/webpack-dev-server --host 0.0.0.0",
     "webpack": "node_modules/.bin/webpack --config ./webpack.config.js",
     "test": "./node_modules/.bin/jest",
-    "db:import": "psql <replace this with your DB name> < server/db/schema.sql",
+    "db:import": "psql animal_shelter_development < server/db/schema.sql",
     "db:seed": "node ./server/bin/seed.js"
   },
   "devDependencies": {
