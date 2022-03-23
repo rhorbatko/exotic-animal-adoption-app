@@ -31,10 +31,28 @@ class PetType {
       const result = await pool.query(query, [id])
       const petTypeData = result.rows[0]
       const petType = new PetType(petTypeData)
+
       return petType
     } catch (error) {
       console.error(error)
       throw error
+    }
+  }
+
+  async findPets() {
+    const petFile = await import("./Pet.js")
+    const Pet = petFile.default
+    try {
+      const query = `SELECT * FROM pets WHERE pet_type_id = $1;`
+      const result = await pool.query(query, [this.id])
+
+      const relatedPetsData = result.rows
+      const relatedPets = relatedPetsData.map(pet => new Pet(pet))
+
+      return relatedPets
+    } catch (err) {
+      console.log(err)
+      throw err
     }
   }
 }

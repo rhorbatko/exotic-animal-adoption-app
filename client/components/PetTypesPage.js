@@ -1,7 +1,5 @@
-import { type } from "jquery"
 import React, { useState, useEffect } from "react"
 import PetTypesItem from "./PetTypesItem"
-
 const PetTypesPage = props => {
   const [petTypes, setPetTypes] = useState([])
 

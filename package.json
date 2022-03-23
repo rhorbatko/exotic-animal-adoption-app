@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "dev": "./node_modules/.bin/nodemon server/app.js",
-    "dev:debug": "./node_modules/.bin/nodemon --inspect-brk server/app.js",
+    "dev:debug": "./node_modules/.bin/nodemon --inspect server/app.js",
     "dev:client": "node_modules/.bin/webpack-dev-server --host 0.0.0.0",
     "webpack": "node_modules/.bin/webpack --config ./webpack.config.js",
     "test": "./node_modules/.bin/jest",
