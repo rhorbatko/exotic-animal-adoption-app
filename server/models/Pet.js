@@ -55,20 +55,6 @@ class Pet {
       throw error
     }
   }
-  async petTypes() {
-    const petTypefile = await import("./PetType.js")
-    const PetType = petTypefile.default
-    try {
-      const query = `SELECT * FROM pet_types WHERE ID = $1;`
-      const result = await pool.query(query, [this.id])
-      const relatedPetTypeData = result.rows[0]
-      const relatedPetType = new PetType(relatedPetTypeData)
-      return relatedPetType
-    } catch (err) {
-      console.log(err)
-      throw err
-    }
-  }
 }
 
 export default Pet
