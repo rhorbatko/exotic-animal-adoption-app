@@ -1,5 +1,5 @@
 
-DROP TABLE IF EXISTS pet_types;
+DROP TABLE IF EXISTS pet_types CASCADE;
 CREATE TABLE pet_types (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -18,6 +18,4 @@ CREATE TABLE pets(
     available_for_adoption BOOLEAN DEFAULT true,
     pet_type_id INTEGER REFERENCES pet_types(id)
 );
-
-
 
