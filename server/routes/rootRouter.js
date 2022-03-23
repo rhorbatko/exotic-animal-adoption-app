@@ -6,10 +6,6 @@ const rootRouter = new express.Router()
 
 rootRouter.use("/api/v1/pet-types", petTypesRouter)
 
-rootRouter.get("/", (req, res) => {
-    res.redirect("/pet-types")
-})
-
 rootRouter.use("/", clientRouter)
 
 export default rootRouter
