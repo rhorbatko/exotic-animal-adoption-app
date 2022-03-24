@@ -4,6 +4,7 @@ import "foundation-sites"
 import $ from "jquery"
 import "../assets/scss/main.scss"
 import PetTypesPage from "./PetTypesPage"
+import AdoptionApplicationForm from "./AdoptionApplicationForm"
 
 import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom"
 
@@ -15,6 +16,7 @@ const App = props => {
   return <div className="callout primary">
     <BrowserRouter>
       <Switch>
+        <Route exact path ="/form" component={AdoptionApplicationForm} />
         <Route exact path ="/pet-types" component={PetTypesPage} />
         <Redirect from ="/" push to = "/pet-types" />
       </Switch>
