@@ -1,21 +1,26 @@
 import React, {useState, useEffect} from 'react'
 
-const PetShowPage = () => {
-  const [pets, setPets] = useState([])
 
+
+const PetShowPage = (props) => {
+  const [pet, setPet] = useState([])
+  
+  const vaccinated =  pet.vaccinationStatus ? "Yes" : "No"
  
   const getPet = async () => {
+    console.log(props)
     const id = props.match.params.id
     try {
       const response = await fetch(`/api/v1/pets/${id}`)
-
+      
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage)
         throw error
       }
       const responseBody = await response.json()
-      setPets(responseBody)
+      
+      setPet(responseBody.pet)
     } catch (error) {
       console.error(`Error in fetch:${error.message}`)
     }
@@ -24,12 +29,18 @@ const PetShowPage = () => {
     getPet()
   }, [])
 
-  const newPet = pets.map(pet => {
-    return <li>key={pet.id}</li>
-  })
+    console.log(pet)
+
 
   return (
-    <div></div>
+    <div>
+      <h1>Name: {pet.name}</h1>
+      <p>Age: {pet.age}</p>
+      <p>Vaccination Status: {vaccinated}</p>
+      <p>Adoption Story: {pet.adoptionStory}</p>
+    </div>
+    
+
   )
 }
 

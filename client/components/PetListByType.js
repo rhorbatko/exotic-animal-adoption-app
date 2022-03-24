@@ -25,7 +25,7 @@ const PetListByType = props => {
   }, [])
   console.log(listOfPets)
   const petList = listOfPets.pets.map(pet => {
-    //return <li key={pet.id}>{pet.name} </li>
+    
     return <PetTile key={pet.id} pet={pet}/> 
   })
   return (
