@@ -4,7 +4,6 @@ import "foundation-sites"
 import $ from "jquery"
 import "../assets/scss/main.scss"
 import PetTypesPage from "./PetTypesPage"
-import AdoptionApplicationForm from "./AdoptionApplicationForm"
 import PetListByType from "./PetListByType"
 import PetShowPage from "./PetShowPage"
 
