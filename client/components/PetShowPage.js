@@ -15,7 +15,7 @@ const PetShowPage = (props) => {
   }
 
   if (clickButton) {
-    adoptionForm = <AdoptionApplicationForm />
+    adoptionForm = <AdoptionApplicationForm petId={pet.id}/>
 
   }
 

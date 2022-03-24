@@ -18,8 +18,7 @@ petsRouter.get("/:id", async (req, res) => {
 petsRouter.post("/:id/adoption-applications", async (req, res)=>{
   const userInput = cleanUserInput(req.body)
   try{
-    const petId = req.params.id
-    const application = new AdoptionApplication(userInput + petId)
+    const application = new AdoptionApplication(userInput)
     await application.save()
     res.status(201).json({ application })
 

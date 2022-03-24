@@ -1,12 +1,15 @@
 import React, {useState} from 'react'
 
 const AdoptionApplicationForm = (props) => {
+  debugger
   const [newApplication, setNewApplication] = useState({
     name:"",
     phoneNumber:"",
     email:"",
     homeStatus:"",
+    petId: props.petId
   })
+
   const addNewApplication = async () =>{
     
   }

@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 
 const PetTile = (props) => {
   let value = props.pet.image
-  console.log(props)
   
   const result = props.pet.vaccinationStatus ? "Yes" : "No"
 
