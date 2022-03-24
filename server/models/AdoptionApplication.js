@@ -17,8 +17,18 @@ class AdoptionApplication {
   }
 
   async save() {
-    try {
-      const query =
+    debugger
+    try{
+      if(!this.name.trim()){
+        throw "Please fill out the name field"
+      }if(!this.phoneNumber.trim()){
+        throw "Please fill out the phone number"
+      }if(!this.email.trim()){
+        throw "Please fill out the email"
+      }if(!this.homeStatus){
+        throw "Please fill out the home status field"
+      }else{
+        const query =
         "INSERT INTO adoption_applications(name, phone_number, email, home_status, application_status, pet_id) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id;"
       const result = await pool.query(query, [
         this.name,
@@ -33,10 +43,13 @@ class AdoptionApplication {
       this.id = newApplicationId
 
       return true
-    } catch (error) {
-      console.log(error)
+      }
+      
+    }catch(error){
+      console.error(error)
       throw error
     }
+    
   }
 
   async findPet() {

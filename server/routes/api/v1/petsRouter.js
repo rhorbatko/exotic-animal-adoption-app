@@ -1,5 +1,5 @@
 import express from "express"
-import cleanUserInput from "../../../helpers/cleanUserInput.js"
+//import cleanUserInput from "../../../helpers/cleanUserInput.js"
 import AdoptionApplication from "../../../models/AdoptionApplication.js"
 
 import Pet from "../../../models/Pet.js"
@@ -16,9 +16,11 @@ petsRouter.get("/:id", async (req, res) => {
   }
 })
 petsRouter.post("/:id/adoption-applications", async (req, res)=>{
-  const userInput = cleanUserInput(req.body)
+  //const userInput = cleanUserInput(req.body)
+  console.log(req.body)
+debugger
   try{
-    const application = new AdoptionApplication(userInput)
+    const application = new AdoptionApplication(req.body)
     await application.save()
     res.status(201).json({ application })
 
