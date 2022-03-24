@@ -10,7 +10,7 @@ const PetTypesItem = props => {
           <h1>{name} </h1>
         </Link>
       </li>
-      <img src={image} />
+      <Link to={`/pet-types/${id}`}><img src={`/${image}`} /></Link>
       <h3>{description}</h3>
     </div>
   )

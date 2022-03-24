@@ -7,7 +7,7 @@ CREATE TABLE pet_types (
     description TEXT
 );
 
-DROP TABLE IF EXISTS pets;
+DROP TABLE IF EXISTS pets CASCADE;
 CREATE TABLE pets(
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -19,3 +19,13 @@ CREATE TABLE pets(
     pet_type_id INTEGER REFERENCES pet_types(id)
 );
 
+DROP TABLE IF EXISTS adoption_applications;
+CREATE TABLE adoption_applications(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    home_status VARCHAR(255) NOT NULL,
+    application_status VARCHAR(255) DEFAULT 'pending',
+    pet_id INTEGER REFERENCES pets(id)
+);
