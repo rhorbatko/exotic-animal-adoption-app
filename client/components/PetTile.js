@@ -9,8 +9,8 @@ const PetTile = (props) => {
 
   return (
     <div>
-      <Link to={`/pet/${props.pet.id}`}><img src={value} /></Link>
-      <Link to={`/pet/${props.pet.id}`}>
+      <Link to={`/pets/${props.pet.id}`}><img src={value} /></Link>
+      <Link to={`/pets/${props.pet.id}`}>
           <h1>{props.pet.name} </h1>
         </Link>
       <p>{props.pet.age}</p>

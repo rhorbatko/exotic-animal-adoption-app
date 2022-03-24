@@ -49,7 +49,7 @@ class Seeder {
         //fish
         {
           name: "Morpheus",
-          imgUrl: "images/morpheus.png",
+          imgUrl: "/images/morpheus.png",
           age: 187,
           vaccinationStatus: false,
           adoptionStory: "Morpheus was found in the Indian Ocean",
@@ -58,7 +58,7 @@ class Seeder {
         },
         {
           name: "Nemo",
-          imgUrl: "images/nemo.jpg",
+          imgUrl: "/images/nemo.jpg",
           age: 3,
           vaccinationStatus: true,
           adoptionStory: "Nemo was rescued from that Australian dentist.",
@@ -67,7 +67,7 @@ class Seeder {
         },
         {
           name: "Koy",
-          imgUrl: "images/koi-fish.jpg",
+          imgUrl: "/images/koi-fish.jpg",
           age: 187,
           vaccinationStatus: true,
           adoptionStory:
@@ -77,7 +77,7 @@ class Seeder {
         },
         {
           name: "Orca",
-          imgUrl: "images/whale.jpg",
+          imgUrl: "/images/whale.jpg",
           age: 54,
           vaccinationStatus: false,
           adoptionStory:
@@ -89,7 +89,7 @@ class Seeder {
         //bird
         {
           name: "Neo",
-          imgUrl: "images/ask-bald-eagle-istock_000017215186large-2.jpg",
+          imgUrl: "/images/ask-bald-eagle-istock_000017215186large-2.jpg",
           age: 35,
           vaccinationStatus: false,
           adoptionStory: "Neo the chosen one was captured in South Florida",
@@ -98,7 +98,7 @@ class Seeder {
         },
         {
           name: "Delta",
-          imgUrl: "images/bird-with-coat.jpg",
+          imgUrl: "/images/bird-with-coat.jpg",
           age: 21,
           vaccinationStatus: false,
           adoptionStory:
@@ -108,7 +108,7 @@ class Seeder {
         },
         {
           name: "Spirit",
-          imgUrl: "images/peguin.jpg",
+          imgUrl: "/images/peguin.jpg",
           age: 14,
           vaccinationStatus: false,
           adoptionStory:
@@ -118,7 +118,7 @@ class Seeder {
         },
         {
           name: "Sam",
-          imgUrl: "images/tucan-sam.jpg",
+          imgUrl: "/images/tucan-sam.jpg",
           age: 74,
           vaccinationStatus: false,
           adoptionStory:
@@ -130,7 +130,7 @@ class Seeder {
         // reptiles
         {
           name: "Trinity",
-          imgUrl: "images/images.jpg",
+          imgUrl: "/images/images.jpg",
           age: 27,
           vaccinationStatus: false,
           adoptionStory: "Trinity was also captured in South Florida",
@@ -139,7 +139,7 @@ class Seeder {
         },
         {
           name: "Salazar",
-          imgUrl: "images/snake.jpg",
+          imgUrl: "/images/snake.jpg",
           age: 65,
           vaccinationStatus: true,
           adoptionStory: "Salazar can't be trusted but he can be adopted.",
@@ -148,7 +148,7 @@ class Seeder {
         },
         {
           name: "Kermit",
-          imgUrl: "images/frog.jpg",
+          imgUrl: "/images/frog.jpg",
           age: 4,
           vaccinationStatus: true,
           adoptionStory: "Kermit the frog here. Refuses to do the voice but can be adopted.",
@@ -157,7 +157,7 @@ class Seeder {
         },
         {
           name: "Snap",
-          imgUrl: "images/alligator.jpg",
+          imgUrl: "/images/alligator.jpg",
           age: 1,
           vaccinationStatus: true,
           adoptionStory: "Snap is pocket sized... for now.",
@@ -168,7 +168,7 @@ class Seeder {
         //mammals
         {
           name: "Dumbo",
-          imgUrl: "images/baby-elephant-first-bath-3.jpeg",
+          imgUrl: "/images/baby-elephant-first-bath-3.jpeg",
           age: 1,
           vaccinationStatus: true,
           adoptionStory: "Dumbo was saved from the circus.",
@@ -177,7 +177,7 @@ class Seeder {
         },
         {
           name: "Bibi and Fiona",
-          imgUrl: "images/hippo.jpg",
+          imgUrl: "/images/hippo.jpg",
           age: 30,
           vaccinationStatus: false,
           adoptionStory: "Adopt Bibi, get Fiona free.",
@@ -186,7 +186,7 @@ class Seeder {
         },
         {
           name: "Tony",
-          imgUrl: "images/tiger.jpg",
+          imgUrl: "/images/tiger.jpg",
           age: 89,
           vaccinationStatus: true,
           adoptionStory:
@@ -196,7 +196,7 @@ class Seeder {
         },
         {
           name: "Bear",
-          imgUrl: "images/bear.jpg",
+          imgUrl: "/images/bear.jpg",
           age: 48,
           vaccinationStatus: false,
           adoptionStory:

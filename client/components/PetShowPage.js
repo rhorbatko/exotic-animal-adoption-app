@@ -1,10 +1,24 @@
-import React, {useState, useEffect} from 'react'
 
+import React, {useState, useEffect} from 'react'
+import AdoptionApplicationForm from './AdoptionApplicationForm'
 
 
 const PetShowPage = (props) => {
   const [pet, setPet] = useState([])
+  const [clickButton, setClickButton] = useState(false)
   
+  let adoptionForm = null;
+
+  const handleClick = (event) =>{
+   event.preventDefault()
+    setClickButton(true)
+  }
+
+  if (clickButton) {
+    adoptionForm = <AdoptionApplicationForm />
+
+  }
+
   const vaccinated =  pet.vaccinationStatus ? "Yes" : "No"
  
   const getPet = async () => {
@@ -34,10 +48,13 @@ const PetShowPage = (props) => {
 
   return (
     <div>
+      <img src={pet.image} />
       <h1>Name: {pet.name}</h1>
       <p>Age: {pet.age}</p>
       <p>Vaccination Status: {vaccinated}</p>
       <p>Adoption Story: {pet.adoptionStory}</p>
+      <button className="button" onClick={handleClick}>Adopt Me!!</button>
+      {adoptionForm}
     </div>
     
 
