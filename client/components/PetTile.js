@@ -1,7 +1,7 @@
 import React from 'react'
 
 const PetTile = (props) => {
-  let value = props.pet.image
+  const value = props.pet.image
   
   const result = props.pet.vaccinationStatus ? "Yes" : "No"
 

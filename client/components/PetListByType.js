@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import PetTile from "./PetTile"
 
 const PetListByType = props => {
-  const [listOfPets, setListOfPets] = useState({ pets: [] })
+  const [petType, setpetType] = useState({ pets: [] })
 
   const getPetList = async () => {
     const id = props.match.params.id
@@ -15,23 +15,24 @@ const PetListByType = props => {
         throw error
       }
       const responseBody = await response.json()
-      setListOfPets(responseBody.petType)
+      setpetType(responseBody.petType)
     } catch (error) {
       console.error(`Error in fetch:${error.message}`)
     }
   }
+
   useEffect(() => {
     getPetList()
   }, [])
-  console.log(listOfPets)
-  const petList = listOfPets.pets.map(pet => {
-    
+
+  const petList = petType.pets.map(pet => {
     return <PetTile key={pet.id} pet={pet}/> 
   })
+  
   return (
     <>
-      <h1>{listOfPets.name}</h1>
-      <p>{listOfPets.description}</p>
+      <h1>{petType.name}</h1>
+      <p>{petType.description}</p>
       <ul>{petList}</ul>
     </>
   )
