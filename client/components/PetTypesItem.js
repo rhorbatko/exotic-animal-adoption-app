@@ -6,7 +6,7 @@ const PetTypesItem = props => {
   return (
     <div>
       <li>
-        <Link to={`/petTypes/${id}`}>
+        <Link to={`/pet-types/${id}`}>
           <h1>{name} </h1>
         </Link>
       </li>

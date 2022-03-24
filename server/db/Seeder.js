@@ -20,12 +20,12 @@ class Seeder {
         {
           name: "Fish",
           imgUrl: "images/Types-of-Fish-800x500.jpeg",
-          description: "Can fly sometimes can't."
+          description: "Can breathe underwater."
         },
         {
           name: "Birds",
           imgUrl: "images/Types-Of-Birds-Pictures.jpg",
-          description: "Can breathe underwater."
+          description: "Can fly sometimes can't."
         }
       ]
 
