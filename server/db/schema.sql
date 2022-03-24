@@ -18,4 +18,3 @@ CREATE TABLE pets(
     available_for_adoption BOOLEAN DEFAULT true,
     pet_type_id INTEGER REFERENCES pet_types(id)
 );
-
