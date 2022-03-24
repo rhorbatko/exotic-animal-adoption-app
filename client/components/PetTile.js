@@ -11,10 +11,10 @@ const PetTile = (props) => {
     <div>
       <Link to={`/pets/${props.pet.id}`}><img src={value} /></Link>
       <Link to={`/pets/${props.pet.id}`}>
-          <h1>{props.pet.name} </h1>
+          <h2>Name: {props.pet.name} </h2>
         </Link>
-      <p>{props.pet.age}</p>
-      <p>{result}</p>
+      <p>Age: {props.pet.age}</p>
+      <p>Vaccinated: {result}</p>
 
     </div>
   )

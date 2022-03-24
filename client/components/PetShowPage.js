@@ -51,7 +51,7 @@ const PetShowPage = (props) => {
       <img src={pet.image} />
       <h1>Name: {pet.name}</h1>
       <p>Age: {pet.age}</p>
-      <p>Vaccination Status: {vaccinated}</p>
+      <p>Vaccinated: {vaccinated}</p>
       <p>Adoption Story: {pet.adoptionStory}</p>
       <button className="button" onClick={handleClick}>Adopt Me!!</button>
       {adoptionForm}
