@@ -23,7 +23,6 @@ const AdoptionApplicationForm = props => {
       if (!response.ok) {
         const body = await response.json()
         setErrors(body.errors)
-        debugger
       } else {
         const body = await response.json()
         console.log("Application Submitted: ", body)

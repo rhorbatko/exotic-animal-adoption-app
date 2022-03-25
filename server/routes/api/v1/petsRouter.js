@@ -16,8 +16,6 @@ petsRouter.get("/:id", async (req, res) => {
   }
 })
 petsRouter.post("/:id/adoption-applications", async (req, res) => {
-  //const userInput = cleanUserInput(req.body)
-
   try {
     const application = new AdoptionApplication(req.body)
     await application.save()
