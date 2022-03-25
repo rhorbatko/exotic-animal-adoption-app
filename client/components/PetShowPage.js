@@ -4,7 +4,8 @@ import AdoptionApplicationForm from "./AdoptionApplicationForm"
 const PetShowPage = props => {
   const [pet, setPet] = useState([])
   const [clickButton, setClickButton] = useState(false)
-
+  // const [formSubmitted, setFormSubmitted] = useState(false)
+  //console.log(formSubmitted)
   let adoptionForm = null
 
   const handleClick = event => {
@@ -19,7 +20,6 @@ const PetShowPage = props => {
   const vaccinated = pet.vaccinationStatus ? "Yes" : "No"
 
   const getPet = async () => {
-    console.log(props)
     const id = props.match.params.id
     try {
       const response = await fetch(`/api/v1/pets/${id}`)
@@ -40,11 +40,9 @@ const PetShowPage = props => {
     getPet()
   }, [])
 
-  console.log(pet)
-
   return (
     <div>
-      <img src={pet.image} />
+      <img className="pet-photo" src={pet.image} />
       <h1>Name: {pet.name}</h1>
       <p>Age: {pet.age}</p>
       <p>Vaccinated: {vaccinated}</p>

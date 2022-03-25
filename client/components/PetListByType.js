@@ -23,10 +23,8 @@ const PetListByType = props => {
   useEffect(() => {
     getPetList()
   }, [])
-  console.log(listOfPets)
   const petList = listOfPets.pets.map(pet => {
-    
-    return <PetTile key={pet.id} pet={pet}/> 
+    return <PetTile key={pet.id} pet={pet} />
   })
   return (
     <>

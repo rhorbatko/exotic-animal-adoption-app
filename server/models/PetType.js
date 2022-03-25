@@ -55,6 +55,22 @@ class PetType {
       throw err
     }
   }
+  async findAvailablePets() {
+    const petFile = await import("./Pet.js")
+    const Pet = petFile.default
+    try {
+      const query = `SELECT * FROM pets WHERE pet_type_id = $1 AND available_for_adoption = true;`
+      const result = await pool.query(query, [this.id])
+
+      const relatedPetsData = result.rows
+      const relatedPets = relatedPetsData.map(pet => new Pet(pet))
+
+      return relatedPets
+    } catch (err) {
+      console.log(err)
+      throw err
+    }
+  }
 }
 
 export default PetType

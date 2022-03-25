@@ -3,11 +3,12 @@ import { hot } from "react-hot-loader/root"
 import "foundation-sites"
 import $ from "jquery"
 import "../assets/scss/main.scss"
+import NavBar from "./NavBar"
 import PetTypesPage from "./PetTypesPage"
 import PetListByType from "./PetListByType"
 import PetShowPage from "./PetShowPage"
 
-import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom"
+import { Redirect, Switch, Route, BrowserRouter } from "react-router-dom"
 
 const App = props => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const App = props => {
   return (
     <div className="callout primary">
       <BrowserRouter>
+        <Route path="/" component={NavBar} />
         <Switch>
           <Route exact path="/pets/:id" component={PetShowPage} />
           <Route exact path="/pet-types/:id" component={PetListByType} />
