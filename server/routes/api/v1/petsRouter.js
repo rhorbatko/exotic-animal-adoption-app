@@ -15,18 +15,16 @@ petsRouter.get("/:id", async (req, res) => {
     res.status(500).json({ errors: error })
   }
 })
-petsRouter.post("/:id/adoption-applications", async (req, res)=>{
+petsRouter.post("/:id/adoption-applications", async (req, res) => {
   //const userInput = cleanUserInput(req.body)
-  console.log(req.body)
-debugger
-  try{
+
+  try {
     const application = new AdoptionApplication(req.body)
     await application.save()
     res.status(201).json({ application })
-
-  }catch(error){
+  } catch (error) {
     console.error(error)
-    res.status(500).json({ errors:error })
+    res.status(500).json({ errors: error })
   }
 })
 export default petsRouter
