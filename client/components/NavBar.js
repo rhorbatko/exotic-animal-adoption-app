@@ -1,16 +1,7 @@
 import React from "react"
-import { useLocation, Redirect, Switch, Route, Link } from "react-router-dom"
-
-// const usePageViews = () => {
-//   let location = useLocation()
-//   React.useEffect(() => {
-//     ga.send(["pageview", location.pathname])
-//   }, [location])
-// }
+import { Link } from "react-router-dom"
 
 const NavBar = props => {
-  let location = useLocation()
-  console.log(location)
   return (
     <div>
       <div className="top-bar">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { useLocation } from "react-router-dom"
 import PetTile from "./PetTile"
 
 const PetListByType = props => {
@@ -20,9 +21,13 @@ const PetListByType = props => {
       console.error(`Error in fetch:${error.message}`)
     }
   }
+
+  let location = useLocation()
+  console.log(location)
+
   useEffect(() => {
     getPetList()
-  }, [])
+  }, [location])
   const petList = listOfPets.pets.map(pet => {
     return <PetTile key={pet.id} pet={pet} />
   })
